@@ -27,7 +27,7 @@ SRCS =
 OBJS = $(SRCS:.c=.o)
 
 # define the executable file
-EXAMPLE = clogexp
+EXAMPLE = log_exp
 
 default: example
 
