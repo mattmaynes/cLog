@@ -1,4 +1,4 @@
 language: c
 compiler: gcc
-script: make example && bin/clogexp
+script: make example && bin/log_exp
 
