@@ -1,5 +1,7 @@
 #CLog 
 
+![image](https://travis-ci.org/mattmaynes/CLog.svg)
+
 #Simple C logging to a stream or file
 
 This is a set of logging macros that simplify logging using the `syslog` facilities. Log messages for various levels of logging can either be sent to the system log or to a standard output stream. There is also an added verbose header that allows for verbose logging taht can be configured at runtime instead of compile time like the default logging. 
