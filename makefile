@@ -29,7 +29,7 @@ OBJS = $(SRCS:.c=.o)
 # define the executable file
 EXAMPLE = clogexp
 
-default: init objs
+default: example
 
 objs:
 	$(CC) $(CFLAGS) -c $(foreach src, $(SRCS), $(IN)/$(src)) -o $(foreach obj, $(OBJS), $(OUT)/$(obj))
