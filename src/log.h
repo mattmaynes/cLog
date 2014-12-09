@@ -23,8 +23,8 @@
  *
  */
 
-#ifndef _CLOG_H
-#define _CLOG_H
+#ifndef _LOG_H
+#define _LOG_H
 
 #include <stdio.h>
 #include <time.h>

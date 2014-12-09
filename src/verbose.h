@@ -23,36 +23,21 @@
  *
  */
 
+#ifndef _VERBOSE_H
+#define _VERBOSE_H
 
-/*
- * Note that to have debug messages print you must
- * either define debug before includign log.h or compile
- * with a flag called debug
- *
- * #define DEBUG
- *
- * OR
- * compile with -DDEBUG
+#include <stdio.h>
+#include <time.h>
+#include <sys/types.h>
+
+/* 
+ * Note: verbose MUST be defined as an int in the code that uses this header
  */
-#include "../src/log.h"
-#include "../src/verbose.h"
+extern int verbose;
 
-int verbose; // Note that this variable must be defined when including verbose.h
+#define verbose(msg, ...)\
+	if(verbose) fprintf(stdout, "[INFO] %ld " msg "\n", time(NULL), ##__VA_ARGS__);\
+	else (void) 0
+	// essentially a no op forcing the placement of a semi-colon
 
-int main(void){
-	log_emerg("Test emerg");
-	log_alert("Test alert");
-	log_critical("Test critical");
-	log_error("Test error");
-	log_warning("Test warning");
-	log_notice("Test notice");
-	log_info("Test info");
-	log_debug("Test debug");
-
-	// Verbose can be toggled at runtime where as all other log macros
-	// are done at compile time
-	verbose("Test verbose off"); // This will not print
-	verbose = 1;
-	verbose("Test verbose on"); // This will
-	return 0;
-}
+#endif /* _VERBOSE_H */
