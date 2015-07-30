@@ -1,4 +1,4 @@
-#CLog 
+#cLog 
 
 ![image](https://travis-ci.org/mattmaynes/CLog.svg)
 
