@@ -1,6 +1,6 @@
 #cLog 
 
-![image](https://travis-ci.org/mattmaynes/CLog.svg)
+![image](https://travis-ci.org/mattmaynes/cLog.svg?branch=master)
 
 #Simple C logging to a stream or file
 
